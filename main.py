@@ -9,6 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import time
 import json  # JSON modülünü ekleyin
+import sys
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")  # Tarayıcıyı headless modda çalıştırır
@@ -65,6 +66,7 @@ try:
     with open('../../kampanyalar.json', 'w', encoding='utf-8') as f:  # Üst klasöre yaz
         json.dump(kampanya_listesi, f, ensure_ascii=False, indent=4)  # JSON formatında yaz
     print("JSON dosyası kaydedildi: ../kampanyalar.json")  # Dosya kaydedildi mesajı
+    print(json.dumps(kampanya_listesi, ensure_ascii=False, indent=4))
 except Exception as e:
     print("JSON dosyasına yazarken bir hata oluştu:", e)  # Hata mesajı
 
