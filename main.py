@@ -62,7 +62,7 @@ for kampanya in kampanyalar:
 
 # Veriyi bir JSON dosyasına yaz
 try:
-    with open('../kampanyalar.json', 'w', encoding='utf-8') as f:  # Üst klasöre yaz
+    with open('../../kampanyalar.json', 'w', encoding='utf-8') as f:  # Üst klasöre yaz
         json.dump(kampanya_listesi, f, ensure_ascii=False, indent=4)  # JSON formatında yaz
     print("JSON dosyası kaydedildi: ../kampanyalar.json")  # Dosya kaydedildi mesajı
 except Exception as e:
